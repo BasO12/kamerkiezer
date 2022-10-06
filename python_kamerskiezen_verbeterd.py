@@ -26,14 +26,14 @@ def on_button():
 def datepick():
     def datechoice():
         print(cal.get_date())
-    win= tk.Tk()
+    win = tk.Tk()
     #Set the Geometry
     win.geometry("250x250")
     win.title("Date Picker")
     #Create a Label
-    Label(win, text= "Kies een datum", foreground="white").pack(padx=20,pady=20)
+    Label(win, text= "Kies een datum", foreground="white", bg='#2da3b3').pack(padx=20,pady=20)
     #Create a Calendar using DateEntry
-    cal = DateEntry(win, width= 16, background= "magenta3", foreground= "white",bd=2, mindate=today)
+    cal = DateEntry(win, width= 16, background="magenta3", foreground="white", bd=2, mindate=today)
     cal.pack(pady=20)
     b = tk.Button(win, text='OK', command=datechoice)
     b.pack(fill='x')
