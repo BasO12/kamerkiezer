@@ -1,6 +1,9 @@
 import tkinter as tk
 from tkinter import *
 from tkcalendar import Calendar, DateEntry
+from datetime import date
+
+today = date.today()
 
 #define on button and check which room is chosen
 
@@ -28,9 +31,9 @@ def datepick():
     win.geometry("250x250")
     win.title("Date Picker")
     #Create a Label
-    Label(win, text= "Choose a Date", background= 'gray61', foreground="white").pack(padx=20,pady=20)
+    Label(win, text= "Kies een datum", foreground="white").pack(padx=20,pady=20)
     #Create a Calendar using DateEntry
-    cal = DateEntry(win, width= 16, background= "magenta3", foreground= "white",bd=2)
+    cal = DateEntry(win, width= 16, background= "magenta3", foreground= "white",bd=2, mindate=today)
     cal.pack(pady=20)
     b = tk.Button(win, text='OK', command=datechoice)
     b.pack(fill='x')
